@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Debug",
+            "type": "shell",
+            "command": "mingw32-make",
+            "args": [
+                "BUILD=debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build the debug configuration with the project Makefile"
+        },
+        {
+            "label": "Build Release",
+            "type": "shell",
+            "command": "mingw32-make",
+            "args": [
+                "BUILD=release"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build the release configuration with the project Makefile"
+        }
+    ]
+}

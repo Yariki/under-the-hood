@@ -2,35 +2,24 @@
 #include<stdio.h>
 #include<iostream>
 
-int main(){
 
-    int a = -1;
-    int c = -1;
-    int b = 2 * a;
-    
-    if(b > 70)
-    {
-        c = b + 2;
-    } 
-    else if(b > 50 ) 
-    {
-        c = 10;
-    }
-    else 
-    {
-        c = 0;
-    }
-
-    int i = 0;
-    const int counter = 100;
-    int arr[counter];
-
-    while(i < counter)
-    {
-        arr[i] = i;
-        i++;
-    }
-
-    
+int method2(int a, int b)
+{
+    int c = a + b;
     return c;
 }
+
+int method1(int arg)
+{
+    int variable_inside = arg + 2;
+    variable_inside = method2(variable_inside, 2);
+    return variable_inside;  // 14
+}
+
+int main()
+{
+    int a = 10;
+    a = method1(a);
+    return a  << 1;
+}
+
